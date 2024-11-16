@@ -12,6 +12,10 @@ db = client.chat_app
 users_collection = db.users
 messages_collection = db.messages
 
+@app.route("/hello", methods=["POST","GET"])
+def hello():
+    return jsonify({"message":"hello"})
+
 @app.route("/register", methods=["POST"])
 def register():
     data = request.json
