@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://Radhika:Radhika@cluster.urbb9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster")
 db = client.chat_app
 users_collection = db.users
 messages_collection = db.messages
